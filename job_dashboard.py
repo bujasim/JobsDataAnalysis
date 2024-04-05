@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 import pandas as pd
-import clipboard
+# import clipboard
 # Import necessary libraries
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -337,26 +337,26 @@ def display_job_details(index):
 
 
 
-        # Inside your display_job_details function, after generating the job_details_string
-        def copy_to_clipboard(job_details):
-            """
-            Copies the provided job details to the clipboard.
-            """
-            clipboard.copy(job_details)
-            st.session_state['copied'] = job_details  # Optional: Track the last copied job details
+        # # Inside your display_job_details function, after generating the job_details_string
+        # def copy_to_clipboard(job_details):
+        #     """
+        #     Copies the provided job details to the clipboard.
+        #     """
+        #     clipboard.copy(job_details)
+        #     st.session_state['copied'] = job_details  # Optional: Track the last copied job details
 
-        # Add an initialization for the copied state if it does not exist
-        if 'copied' not in st.session_state:
-            st.session_state['copied'] = ""
+        # # Add an initialization for the copied state if it does not exist
+        # if 'copied' not in st.session_state:
+        #     st.session_state['copied'] = ""
 
-        # Create a button that, when clicked, copies the job details to the clipboard
-        if st.button("Copy Job Details to Clipboard"):
-            copy_to_clipboard(job_details_string)
-            st.success("Copied to clipboard!")  # Give user feedback
+        # # Create a button that, when clicked, copies the job details to the clipboard
+        # if st.button("Copy Job Details to Clipboard"):
+        #     copy_to_clipboard(job_details_string)
+        #     st.success("Copied to clipboard!")  # Give user feedback
 
-        # Optional: Display a toast or message if something was recently copied
-        if st.session_state['copied']:
-            st.toast(f"Copied to clipboard: {st.session_state['copied']}", icon='✅')
+        # # Optional: Display a toast or message if something was recently copied
+        # if st.session_state['copied']:
+        #     st.toast(f"Copied to clipboard: {st.session_state['copied']}", icon='✅')
 
 
 
