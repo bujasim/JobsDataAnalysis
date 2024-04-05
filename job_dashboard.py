@@ -1,10 +1,8 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 import streamlit as st
 import pandas as pd
-import streamlit.components.v1 as components
 import clipboard
 # Import necessary libraries
 import matplotlib.pyplot as plt
